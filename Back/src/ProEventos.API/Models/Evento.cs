@@ -14,5 +14,21 @@ namespace ProEventos.API.Models
         public int QtdPessoas { get; set; }
         public string Lote { get; set; }
         public string ImagemURL { get; set; }
+
+        public Evento()
+        {
+            
+        }
+
+        public Evento(int eventoId, string local, string dataEvento, string tema, int qtdPessoas, string lote, string imagemURL) 
+        {
+            EventoId = eventoId;
+            Local = local;
+            DataEvento = dataEvento;
+            Tema = tema;
+            QtdPessoas = qtdPessoas;
+            Lote = lote;
+            ImagemURL = imagemURL;
+        }
     }
 }
