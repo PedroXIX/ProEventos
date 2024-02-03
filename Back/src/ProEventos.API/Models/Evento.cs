@@ -17,10 +17,10 @@ namespace ProEventos.API.Models
 
         public Evento()
         {
-            
+
         }
 
-        public Evento(int eventoId, string local, string dataEvento, string tema, int qtdPessoas, string lote, string imagemURL) 
+        public Evento(int eventoId, string local, string dataEvento, string tema, int qtdPessoas, string lote, string imagemURL)
         {
             EventoId = eventoId;
             Local = local;
