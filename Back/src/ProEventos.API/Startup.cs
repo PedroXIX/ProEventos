@@ -31,7 +31,8 @@ namespace ProEventos.API
             services.AddDbContext<DataContext>(
                 context => context.UseSqlite(Configuration.GetConnectionString("Default"))
             );
-            services.AddScoped<SeedingService>();
+            services.AddScoped<SeedingService>(); /*  Quando você registra o SeedingService no contêiner com services.AddScoped<SeedingService>();,
+             o contêiner já sabe que o SeedingService depende do DataContext, porque isso está definido no construtor da classe. */
             services.AddControllers();
             services.AddCors();
             services.AddSwaggerGen(c =>
